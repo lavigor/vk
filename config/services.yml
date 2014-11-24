@@ -1,0 +1,17 @@
+services:
+    auth.provider.oauth.service.vk:
+        class: lavigor\vk\auth\provider\vk
+        arguments:
+            - @config
+            - @request
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: auth.provider.oauth.service }
+
+    lavigor.vk.listener:
+        class: lavigor\vk\event\listener
+        arguments:
+            - @user
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,32 @@
+{
+    "name": "lavigor/vk",
+    "type": "phpbb-extension",
+    "description": "Enables OAuth authorization with VK.com.",
+    "version": "1.0.0",
+    "keywords": ["lavigor", "phpbb", "extension", "auth", "provider", "vkontakte", "vk"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Igor Lavrov",
+            "homepage": "https://github.com/lavigor",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpbb/epv": "dev-master"
+    },
+    "extra": {
+        "display-name": "VK.com authorization",
+        "soft-require": {
+           "phpbb/phpbb": "3.1.*"
+        },
+        "version-check": {
+            "host": "lavigor.github.io",
+            "directory": "/extensions",
+            "filename": "vk.json"
+        }
+    }
+}
