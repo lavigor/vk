@@ -7,6 +7,9 @@ use OAuth\Common\Http\Uri\Uri;
 use OAuth\Common\Consumer\Credentials;
 use OAuth\Common\Http\Client\ClientInterface;
 use OAuth\Common\Storage\TokenStorageInterface;
+/*
+* @ignore
+*/
 use OAuth\Common\Http\Uri\UriInterface;
 
 class Vk extends AbstractService
@@ -46,7 +49,7 @@ class Vk extends AbstractService
 
 		if( null === $data || !is_array($data) ) {
 			throw new TokenResponseException('Unable to parse response.');
-		} elseif( isset($data['error'] ) ) {
+		} else if( isset($data['error'] ) ) {
 			throw new TokenResponseException('Error in retrieving token: "' . $data['error'] . '"');
 		}
 
