@@ -59,7 +59,7 @@ class vk extends \phpbb\auth\provider\oauth\service\base
 	{
 		if (!($this->service_provider instanceof \OAuth\OAuth2\Service\Vk))
 		{
-			throw new exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE');
+			throw new \phpbb\auth\provider\oauth\service\exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE');
 		}
 
 		// This was a callback request, get the token
@@ -77,7 +77,7 @@ class vk extends \phpbb\auth\provider\oauth\service\base
 	{
 		if (!($this->service_provider instanceof \OAuth\OAuth2\Service\Vk))
 		{
-			throw new exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE');
+			throw new \phpbb\auth\provider\oauth\service\exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE');
 		}
 
 		// This was a callback request, get the token
