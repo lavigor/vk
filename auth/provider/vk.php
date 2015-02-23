@@ -31,8 +31,10 @@ class vk extends \phpbb\auth\provider\oauth\service\base
 	/**
 	* Constructor
 	*
-	* @param	\phpbb\config\config				$config
-	* @param	\phpbb\request\request_interface 	$request
+	* @param	\phpbb\config\config				$config			Config object
+	* @param	\phpbb\request\request_interface	$request		Request object
+	* @param	string								$php_root_path	phpbb_root_path
+	* @param	string								$php_ext		phpEx
 	*/
 	public function __construct(\phpbb\config\config $config, \phpbb\request\request_interface $request, $phpbb_root_path, $php_ext)
 	{
